@@ -92,10 +92,73 @@ th { color: var(--muted); font-weight: 500; }
   font-size: 0.75rem;
 }
 .muted { color: var(--muted); }
-.row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.7rem 0; }
+.small { font-size: 0.82rem; }
+.row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.7rem 0; align-items: center; }
+.row.spread { justify-content: space-between; }
 .cardish {
   margin-top: 0.9rem;
   padding: 0.9rem;
   border: 1px dashed var(--line);
   border-radius: 14px;
 }
+h4 { margin: 1rem 0 0.5rem; font-weight: 650; font-size: 0.95rem; }
+.nowrap { white-space: nowrap; }
+
+/* 读日条：四处视图同源 */
+.readbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+.readbar-main { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.readbar-main strong { font-size: 1.05rem; letter-spacing: 0.02em; }
+.readbar-set { display: flex; gap: 0.4rem; }
+.readbar-set input { width: 9.5rem; }
+
+/* 统计块 */
+.stats { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.6rem 0 1rem; }
+.stat {
+  min-width: 6.2rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  display: grid;
+  gap: 0.15rem;
+}
+.stat strong { font-size: 1.15rem; }
+
+/* 键值说明 */
+.kv {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.35rem 0.9rem;
+  margin: 0.4rem 0 0.8rem;
+  font-size: 0.92rem;
+}
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; }
+
+/* 拒因 */
+.reason { color: var(--danger); font-size: 0.85rem; margin-left: 0.35rem; }
+.err { color: var(--danger); min-height: 1.2em; }
+
+/* 跨日行：明显不同于当日池 */
+tbody tr.cross { background: #fbf1ee; }
+tbody tr.cross td { border-bottom-color: #ecd3cc; }
+
+/* 状态 chip 变体 */
+.chip.ok { background: #e7f5c8; color: #33481a; }
+.chip.warn { background: #f7ddd6; color: #7d2a1c; }
+.chip.future { background: #e5ecf6; color: #2c3f5e; }
+.chip.src { background: #eef0ea; color: #4a5a4c; font-family: ui-monospace, monospace; }
+.chip.mode { background: #eaf6ff; color: #22506f; }
+
+.audits { margin-top: 0.3rem; font-size: 0.86rem; }
+.audits th, .audits td { padding: 0.35rem 0.3rem; }
